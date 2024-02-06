@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Patients</title>
+
+  <link href="index.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <style>
+    .table-container {
+      margin-top: 20px; /* Adjust the space between the tables */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top ">
+    <div class="container">
+      <h1 class="logo me-auto"><a href="index.html">Intellier</a></h1>
+      <nav id="navbar" class="navbar navbar-light">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html"><b>Overview</b></a></li>
+          <li><a class="nav-link scrollto" href="task.html"><b>Create Task</b></a></li>
+          <li><a class="nav-link scrollto" href="doc_profile.html"><b>Create Task</b></a></li>
+          <li><a class="nav-link scrollto active" href="login.html"><b>Task Analysis</b></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+  <br><br><br><br><br>
+
+
+  <section class="c">
+    <div class="ca">
+     
+      <p class="lm q"><img src="task.jpg" alt="" class="v"><b>Total Task</b></p>
+      <div class="fac">
+      
+   
+    </div>
+    </div>
+
+    <div class="ca">
+     
+      <p class="lm temp"><img src="assets/images/temperature.png" alt=""  class="v"><b>Completed Task</b></p>
+      <div class="fac">
+        
+      </div>
+    </div>
+
+    <div class="ca">
+      <p class="lm q"><img src="assets/images/blood_pressure.png" alt=""  class="v"><b>On Progress</b></p>
+      <div class="fac">
+       
+      </div>
+     
+    </div>
+
+    <div class="ca">
+      <p class="lm temp"><img src="assets/images/glucose.jpg" alt=""  class="v"><b>Canceled Task</b></p>
+      <div class="fac">
+      
+      </div>
+    
+     
+    </div>
+  </section>
+  
+  <!-- Table section -->
+  <div class="container table-container">
+    <div class="row">
+      <div class="col-6"><b class="xyz">TODO TASK</b>
+        <table class="contents">
+          <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Taskname</th>
+            <th>Createdate</th>
+            <th>Duedate</th>
+            <th>Status</th>
+         </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+             <td>1</td>
+             <td> Tom Cruise</td>
+             <td>+441233312300</td>
+             <td>Routine checkup</td>
+             <td><a href="report.html" class="but" >View Report</a></td>
+           </tr>
+       </tbody>
+        </table>
+      </div>
+      <div class="col-6"><b class="xyz">Completed Task</b>
+        <table class="contents">
+          <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Taskname</th>
+            <th>Createdate</th>
+            <th>Duedate</th>
+            <th>Status</th>
+         </tr>
+        </thead>
+        <tbody id="tableBody2">
+          <tr>
+             <td>1</td>
+             <td> Tom Cruise</td>
+             <td>+441233312300</td>
+             <td>Routine checkup</td>
+             <td><a href="report.html" class="but" >View Report</a></td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="connect.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

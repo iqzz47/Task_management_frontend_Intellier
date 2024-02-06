@@ -1,0 +1,62 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #4EA5D9;
+}
+  
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 20px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #header .logo a {
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+  
+  
+  .navbar ul {
+    margin: 0;
+    padding-left: 400px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding-right: 10px;
+  }
+
+  #btn{
+    width: 150px;
+    border-color: white;
+    color: white;
+    background-color: #4EA5D9;
+}
+h5{
+    color: #2A4494;
+}
+#aa{
+    color: #fff;
+    text-decoration: none;
+  }
