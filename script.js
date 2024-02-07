@@ -7,7 +7,7 @@ document.getElementById("btn").addEventListener("click", function () {
     createdate: document.getElementById("ControlInput1").value+ 'T00:00:00',
     duedate: document.getElementById("ControlInput2").value+ 'T00:00:00', 
     duration: document.getElementById("TextInput3").value,
-    status: document.getElementById("TextInput4").value,
+    status: "Incomplete",
     assignedfrom: document.getElementById("TextInput5").value,
     assignedto: document.getElementById("TextInput6").value,
   };

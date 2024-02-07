@@ -1,57 +1,59 @@
-// script.js
-
 // Function to fetch data from the FastAPI backend
-async function fetchData() {
-    try {
-      const response = await fetch('http://127.0.0.1:8000/readalltask', {
-        method: 'GET',
-        mode: 'cors',  // Enable CORS
-        headers: {
-          'Content-Type': 'application/json',
-          // Add any other headers if needed
-        },
+async function fetchData(endpoint, tableBody) {
+  try {
+      const response = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
+          method: 'GET',
+          mode: 'cors',  // Enable CORS
+          headers: {
+              'Content-Type': 'application/json',
+              // Add any other headers if needed
+          },
       });
-  
+
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error! Status: ${response.status}`);
       }
-  
+
       const data = await response.json();
-  
+
       // Process the data and update the HTML table
-      updateTable(data);
-    } catch (error) {
+      updateTable(data, tableBody);
+  } catch (error) {
       console.error('Error fetching data:', error);
-    }
   }
-  
-  // Function to update the HTML table with fetched data
-  function updateTable(data) {
-    const tableBody1 = document.getElementById('tableBody');
-    const tableBody2 = document.getElementById('tableBody2');
-  
-    tableBody1.innerHTML = ''; // Clear existing rows
-    tableBody2.innerHTML = ''; // Clear existing rows
-  
-    data.forEach((task, index) => {
-      const row = `<tr>
-                     <td>${index + 1}</td>
-                     <td>${task.taskname}</td>
-                     <td>${formatDate(task.createdate)}</td>
-                     <td>${formatDate(task.duedate)}</td>
-                     <td>${task.status}</td>
-                   </tr>`;
-  
-      tableBody1.innerHTML += row;
-      tableBody2.innerHTML += row;
-    });
-  }
-  
-  function formatDate(dateTimeString) {
-    // Assuming dateTimeString is in 'YYYY-MM-DDTHH:mm:ss' format
-    const datePart = dateTimeString.split('T')[0];
-    return datePart;
 }
-  // Call the fetchData function when the page loads
-  document.addEventListener('DOMContentLoaded', fetchData);
-  
+
+// Function to update the HTML table with fetched data
+function updateTable(data, tableBody) {
+  tableBody.innerHTML = ''; // Clear existing rows
+
+  data.forEach((task, index) => {
+      const row = `<tr>
+                   <td>${index + 1}</td>
+                   <td>${task.taskname}</td>
+                   <td>${formatDate(task.createdate)}</td>
+                   <td>${formatDate(task.duedate)}</td>
+                   <td>${task.status}</td>
+                 </tr>`;
+
+      tableBody.innerHTML += row;
+  });
+}
+
+function formatDate(dateTimeString) {
+  // Assuming dateTimeString is in 'YYYY-MM-DDTHH:mm:ss' format
+  const datePart = dateTimeString.split('T')[0];
+  return datePart;
+}
+
+// Call the fetchData function for incomplete tasks when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const tableBody1 = document.getElementById('tableBody');
+  fetchData('readincompletetask', tableBody1);
+});
+
+// Call the fetchData function for complete tasks when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+  const tableBody2 = document.getElementById('tableBody2');
+  fetchData('readcompletetask', tableBody2);
+});
