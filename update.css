@@ -1,0 +1,89 @@
+.x {
+    margin: 20px 20px 20px 20px;
+}
+
+.z {
+    margin-left: 10px;
+}
+
+.a {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+
+.a .row {
+    width: 100%;
+}
+.b{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+.b label{
+    margin-top:5px;
+    font-size:12px;
+}
+
+.form-group{
+    margin-left: 5px;
+}
+
+.b .row {
+    width: 100%;
+    margin-left:5px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+  
+}
+  
+  
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #header {
+    background: #fff;
+  }
+  
+  
+  #header .logo {
+    font-size: 30px;
+    padding-left: 1%;
+    padding-top: 1%;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #header .logo a {
+    /* padding-left: 5%; */
+    color: #4EA5D9;
+    text-decoration: none;
+  }
+  
+  
+  .navbar ul {
+    margin: 0;
+    padding-left: 400px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }

@@ -34,6 +34,7 @@ async function fetchData(endpoint, tableBody) {
                      <td>${formatDate(task.createdate)}</td>
                      <td>${formatDate(task.duedate)}</td>
                      <td>${task.status}</td>
+                     <th><a href="update.html?t_code=${task.t_code}"" class="but" >Update</a><a href="report.html?t_code=${task.t_code}" class="but" >Delete</a></th>
                    </tr>`;
   
         tableBody.innerHTML += row;
