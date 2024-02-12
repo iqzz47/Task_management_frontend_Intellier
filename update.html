@@ -30,13 +30,14 @@
 
 <div class="container">
     <div class="a">
-        <form>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control x" placeholder="T_Code">
+        <form id="fBody">
+            <div class="row"  >
+                <div class="col" >
+                  
+                    <input type="text" class="form-control x" placeholder="T_Code" name="T_Code" id="t_code" disabled>
                 </div>
-                <div class="col">
-                    <input type="text" class="form-control x" placeholder="Task Name">
+                <div class="col" >
+                    <input type="text" class="form-control x" id="taskname" placeholder="Task Name" name="Task_Name">
                 </div>
             </div>
         </form>
@@ -46,44 +47,46 @@
 
 <div class="container">
     <div class="b">
-<form>
+<form  id="fBody2">
     <div class="row">
       <div class="col-md-6">
         <label for="inputEmail4">Assigned From</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="assignedfrom">
+        <input type="text" class="form-control" id="inputEmail4" placeholder="assignedfrom"name="from" disabled >
       </div>
       <div class="col-md-6">
         <label for="inputPassword4">Assigned To</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="assignedto">
+        <input type="text" class="form-control" id="inputPassword4" placeholder="assignedto"name="to">
       </div>
     </div>
     
     <div class="row">
     <div class="col">
       <label for="inputAddress">Task description</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <input type="text" class="form-control" id="inputAddress" placeholder="Conduct a survey of the whole management. Give update every week to Lm.">
     </div>
 </div>
     <div class="row">
       <div class="col-md-4">
         <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
+        <input type="date" class="form-control" id="inputCity"name="dc" disabled>
       </div>
       
       <div class="col-md-4">
         <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+        <input type="date" class="form-control" id="inputZip"name="dd">
       </div>
       <div class="col-md-2">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
+        <label for="inputState">Status</label>
+        <select id="inputState" class="form-control" name="status" id="status">
           <option selected>Choose...</option>
-          <option>...</option>
+          <option>Incomplete</option>
+          <option>Complete</option>
+          <option>On Progress</option>
         </select>
       </div>
       <div class="col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+        <label for="inputZip">Duration</label>
+        <input type="text" class="form-control" id="inputZip3" name="dur">
       </div>
       
     </div>
@@ -91,7 +94,8 @@
     <div class="row">
         
     <div class="col">
-    <button type="submit" class="btn btn-primary">Update</button>
+     
+    <button type="submit" class="btn btn-primary" id="bt">Update</button>
     </div>
     </div>
   </form>
@@ -99,6 +103,7 @@
 </div>
 
 <script src="update.js"></script>
+<script src="updatedata.js"></script>
 
 </body>
 </html>

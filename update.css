@@ -87,3 +87,8 @@ body {
     padding-right: 10px;
     padding-bottom: 5px;
   }
+
+  .btn{
+    background-color: #4EA5D9;
+    color: white;
+  }
