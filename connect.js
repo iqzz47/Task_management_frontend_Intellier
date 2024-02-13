@@ -1,4 +1,20 @@
 // Function to fetch data from the FastAPI backend
+// dashboard.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the employee ID from the URL query parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const employeeID = urlParams.get('employeeID');
+
+  // Use the employeeID as needed
+  console.log("Employee ID:", employeeID);
+  // ... rest of your dashboard page logic
+});
+
+
+
+
+
 async function fetchData(endpoint, tableBody) {
   try {
       const response = await fetch(`http://127.0.0.1:8000/${endpoint}`, {
@@ -57,3 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableBody2 = document.getElementById('tableBody2');
   fetchData('readcompletetask', tableBody2);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tableBody3 = document.getElementById('tableBody3');
+  fetchData('readonprogresstask', tableBody3);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tableBody4 = document.getElementById('tableBody4');
+  fetchData('readcanceltask', tableBody4);
+});
+

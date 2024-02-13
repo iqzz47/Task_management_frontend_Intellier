@@ -27,7 +27,7 @@
           <li><a class="nav-link scrollto" href="index.html"><b>Overview</b></a></li>
           <li><a class="nav-link scrollto" href="task.html"><b>Create Task</b></a></li>
           <li><a class="nav-link scrollto" href="detail.html"><b>Task Details</b></a></li>
-          <li><a class="nav-link scrollto active" href="login.html"><b>Profile</b></a></li>
+          <li><a class="nav-link scrollto active" href="profile.html"><b>Profile</b></a></li>
         </ul>
       </nav>
     </div>
@@ -39,23 +39,24 @@
   <section class="c">
     <div class="ca">
      
-      <p class="lm q"><img src="task.png" alt="" class="v"><b>Total Task</b></p>
-      <div class="fac">
+      <p class="lm q"><img src="task.png" alt="" class="v"><b>Total Task:10</b></p>
+      
+      
       
    
     </div>
-    </div>
+    
 
     <div class="ca">
      
-      <p class="lm temp"><img src="completed.png" alt=""  class="v"><b>Completed Task</b></p>
+      <p class="lm temp"><img src="completed.png" alt=""  class="v"><b>Completed Task:5</b></p>
       <div class="fac">
         
       </div>
     </div>
 
     <div class="ca">
-      <p class="lm q"><img src="stopwatch.png" alt=""  class="v"><b>On Progress</b></p>
+      <p class="lm q"><img src="stopwatch.png" alt=""  class="v"><b>On Progress:3</b></p>
       <div class="fac">
        
       </div>
@@ -63,7 +64,7 @@
     </div>
 
     <div class="ca">
-      <p class="lm temp"><img src="to-do-list.png" alt=""  class="v"><b>Canceled Task</b></p>
+      <p class="lm temp"><img src="to-do-list.png" alt=""  class="v"><b>Canceled Task:2</b></p>
       <div class="fac">
       
       </div>
@@ -75,7 +76,7 @@
   <!-- Table section -->
   <div class="container table-container">
     <div class="row">
-      <div class="col-6"><b class="xyz">TODO TASK</b>
+      <div class="col-6 edit"><b class="xyz">TODO TASK</b>
         <table class="contents">
           <thead>
           <tr>
@@ -97,7 +98,7 @@
        </tbody>
         </table>
       </div>
-      <div class="col-6"><b class="xyz">COMPLETED TASK</b>
+      <div class="col-6 edit"><b class="xyz">COMPLETED TASK</b>
         <table class="contents">
           <thead>
           <tr>
@@ -121,6 +122,65 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="container table-container">
+    <div class="row">
+      <div class="col-6 edit"><b class="xyz">ON PROGRESS</b>
+        <table class="contents">
+          <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Taskname</th>
+            <th>Createdate</th>
+            <th>Duedate</th>
+            <th>Status</th>
+         </tr>
+        </thead>
+        <tbody id="tableBody3">
+          <tr>
+             <td>1</td>
+             <td> Tom Cruise</td>
+             <td>+441233312300</td>
+             <td>Routine checkup</td>
+             <td><a href="report.html" class="but" >View Report</a></td>
+           </tr>
+       </tbody>
+        </table>
+      </div>
+      <div class="col-6 edit"><b class="xyz">CANCELED TASK</b>
+        <table class="contents">
+          <thead>
+          <tr>
+            <th>Serial No.</th>
+            <th>Taskname</th>
+            <th>Createdate</th>
+            <th>Duedate</th>
+            <th>Status</th>
+         </tr>
+        </thead>
+        <tbody id="tableBody4">
+          <tr>
+             <td>1</td>
+             <td> Tom Cruise</td>
+             <td>+441233312300</td>
+             <td>Routine checkup</td>
+             <td><a href="report.html" class="but" >View Report</a></td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
 
   <script src="connect.js"></script>
  
