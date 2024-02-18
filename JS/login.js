@@ -14,18 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         // Make an HTTP POST request to the backend API
-        fetch(`http://127.0.0.1:8000/verifyemployee?employeeid=${employeeID}`)
+       
+        fetch(`http://127.0.0.1:8000/token?employeeid=${employeeID}&password=${password}`)
            
         .then(response => response.json())
         .then(data => {
-            // Handle the response from the backend
+            // Handle the response froms the backend
             console.log(data);
+            
 
             // Check the verification status
-            if (data==true) {
+            if (data!=0) {
+                localStorage.setItem("employeeID", employeeID);
+
                 // Redirect or perform actions for a successful login
                 console.log("Login successful!");
-                window.location.href = `index.html?employeeID=${employeeID}`;
+                window.location.href = `index.html`;
             } else {
                 // Handle failed login (show error message, etc.)
                 console.log("Login failed. Please check your credentials.");
